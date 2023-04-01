@@ -97,14 +97,30 @@ pub enum SlackMessageEventType {
     BotMessage,
     #[serde(rename = "me_message")]
     MeMessage,
+    #[serde(rename = "app_conversation_join")]
+    AppConversationJoin,
+    #[serde(rename = "app_conversation_leave")]
+    AppConversationLeave,
     #[serde(rename = "channel_join")]
     ChannelJoin,
     #[serde(rename = "channel_leave")]
     ChannelLeave,
+    #[serde(rename = "channel_archive")]
+    ChannelArchive,
+    #[serde(rename = "channel_unarchive")]
+    ChannelUnarchive,
+    #[serde(rename = "file_comment")]
+    FileComment,
+    #[serde(rename = "pinned_item")]
+    PinnedItem,
     #[serde(rename = "bot_add")]
     BotAdd,
     #[serde(rename = "bot_remove")]
     BotRemove,
+    #[serde(rename = "reminder_add")]
+    ReminderAdd,
+    #[serde(rename = "reminder_remove")]
+    ReminderRemove,
     #[serde(rename = "channel_topic")]
     ChannelTopic,
     #[serde(rename = "channel_purpose")]
@@ -127,6 +143,8 @@ pub enum SlackMessageEventType {
     SlackbotResponse,
     #[serde(rename = "emoji_changed")]
     EmojiChanged,
+    #[serde(rename = "reply_broadcast")]
+    ReplyBroadcast,
     #[serde(rename = "sh_room_created")]
     SlackHuddleRoomCreated,
     #[serde(rename = "channel_archive")]
